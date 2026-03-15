@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 213 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 213 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 25% 15%;
+    --primary: 213 25% 15%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 213 15% 96%;
+    --secondary-foreground: 213 25% 15%;
+    --muted: 213 15% 96%;
+    --muted-foreground: 213 10% 45%;
+    --accent: 213 25% 15%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 213 25% 15%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 213 25% 15%;
+    --foreground: 0 0% 100%;
+    --card: 213 25% 15%;
+    --card-foreground: 0 0% 100%;
+    --popover: 213 25% 15%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 213 25% 15%;
+    --secondary: 213 15% 25%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 213 15% 25%;
+    --muted-foreground: 213 10% 70%;
+    --accent: 213 15% 25%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 213 15% 25%;
+    --input: 213 15% 25%;
+    --ring: 213 15% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .glass-morphism {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  }
+  .hero-gradient {
+    background: linear-gradient(180deg, rgba(28, 36, 46, 0.4) 0%, rgba(28, 36, 46, 0.8) 100%);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
