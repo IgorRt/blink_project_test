@@ -98,10 +98,10 @@ export function Navbar() {
       )}>
         <div className="flex flex-col h-full p-8">
           <div className="flex items-center justify-between mb-12">
-            <div className="text-2xl font-bold tracking-tighter uppercase text-primary">
+            <div className="text-2xl font-bold tracking-tighter uppercase text-white">
               Хабаровск<span className="font-light opacity-70">-Сити</span>
             </div>
-            <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-primary">
+            <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-white">
               <X className="w-8 h-8" />
             </button>
           </div>
@@ -112,19 +112,19 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-2xl font-bold text-primary hover:opacity-70"
+                className="text-2xl font-bold text-white hover:opacity-70"
               >
                 {link.name}
               </a>
             ))}
           </div>
 
-          <div className="mt-auto pt-8 border-t">
-            <a href="tel:+74951545054" className="flex items-center gap-3 text-lg font-semibold text-primary mb-6">
+          <div className="mt-auto pt-8 border-t border-white/20">
+            <a href="tel:+74951545054" className="flex items-center gap-3 text-lg font-semibold text-white mb-6">
               <Phone className="w-5 h-5" />
               <span>+7 (495) 154-50-54</span>
             </a>
-            <button className="w-full bg-primary text-primary-foreground py-4 rounded-2xl font-bold text-lg">
+            <button className="w-full bg-white text-primary py-4 rounded-2xl font-bold text-lg">
               Получить консультацию
             </button>
           </div>

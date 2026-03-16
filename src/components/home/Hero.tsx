@@ -38,12 +38,12 @@ export function Hero() {
         </div>
         
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter uppercase mb-6 leading-[0.9] text-balance"
+          className="text-[clamp(2.5rem,8vw,6rem)] md:text-7xl lg:text-8xl font-black text-white tracking-tighter uppercase mb-6 leading-[0.9] text-balance"
           style={{ y: textY }}
         >
           Хабаровск<span className="opacity-70 font-light">-Сити</span>
           <br />
-          <span className="text-3xl md:text-5xl lg:text-6xl font-light text-white/80">Город будущего</span>
+          <span className="text-[clamp(1.5rem,5vw,4rem)] md:text-5xl lg:text-6xl font-light text-white/80">Город будущего</span>
         </motion.h1>
         
         <p className="max-w-2xl text-lg md:text-xl text-white/80 mb-12 font-medium">
