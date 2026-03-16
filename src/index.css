@@ -55,9 +55,11 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
@@ -67,11 +69,13 @@
   .text-balance {
     text-wrap: balance;
   }
+
   .glass-morphism {
     @apply backdrop-blur-md bg-white/10 border border-white/20;
   }
+
   .hero-gradient {
-    background: linear-gradient(180deg, rgba(28, 36, 46, 0.4) 0%, rgba(28, 36, 46, 0.8) 100%);
+    background: linear-gradient(180deg, rgb(28 36 46 / 40%) 0%, rgb(28 36 46 / 80%) 100%);
   }
 }
 

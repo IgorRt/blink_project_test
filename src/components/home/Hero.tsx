@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-
-const heroBg = "https://v3b.fal.media/files/b/0a91d10c/N4RXxtCtEzCubo-pZIHeL_d1MiNmsI.png";
+import heroBg from '../../assets/images/hero-bg.png';
 
 export function Hero() {
   const containerRef = useRef<HTMLElement>(null);

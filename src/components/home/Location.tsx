@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const mapImage = "https://v3b.fal.media/files/b/0a91d110/QtMIFJDPujDIXJ9vMw-Pj_5DmSh05f.png";
+import mapImage from '../../assets/images/map-image.png';
 
 const locations = [
   { label: 'р. Амур', value: '0 мин' },

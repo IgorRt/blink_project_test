@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Instagram, Youtube, Facebook, Send } from 'lucide-react';
 
 const quickLinks = [

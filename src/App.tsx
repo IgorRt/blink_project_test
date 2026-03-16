@@ -71,7 +71,7 @@ function App() {
                     Хабаровск-Сити станет новой визитной карточкой города, воплощая в себе лучшие мировые стандарты бизнес-среды.
                   </p>
                   <div className="space-y-4">
-                    {['Панорамное остекление', 'Лаконичные формы', 'Эстетика и комфорт', 'Инновационные решения'].map((item, i) => (
+                    {['Панорамное остекление', 'Лаконичные формы', 'Эстетика и комфорт', 'Инновационные решения'].map((item) => (
                       <div key={item} className="flex items-center gap-3 text-lg font-bold text-primary">
                         <div className="w-6 h-1 bg-primary rounded-full" />
                         <span>{item}</span>
