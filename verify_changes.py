@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
       # Since it fades out via opacity/translate instead of display:none, we can check the class
       expect(page_mobile.locator('.fixed.inset-0.z-\\[60\\]')).to_have_class(
-          'fixed inset-0 z-[60] bg-background/98 backdrop-blur-xl transition-all duration-500 lg:hidden opacity-0 translate-x-full'
+          'fixed inset-0 z-[60] bg-zinc-900/98 backdrop-blur-xl transition-all duration-500 lg:hidden opacity-0 translate-x-full'
       )
       page_mobile.screenshot(path="/home/jules/verification/verification-mobile-menu-closed.png")
 

@@ -3,11 +3,7 @@
 > vite
 
 
-  VITE v7.3.1  ready in 506 ms
+  VITE v7.3.1  ready in 646 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://192.168.0.2:3000/
-12:44:52 AM [vite] (client) hmr update /src/components/layout/Navbar.tsx, /src/index.css
-12:45:24 AM [vite] (client) hmr update /src/components/layout/Navbar.tsx, /src/index.css
-12:45:43 AM [vite] (client) hmr update /src/components/layout/Footer.tsx, /src/index.css
-12:46:21 AM [vite] (client) hmr update /src/components/home/Infrastructure.tsx, /src/index.css

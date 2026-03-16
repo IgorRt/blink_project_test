@@ -47,28 +47,23 @@ export function Infrastructure() {
               transition={{ delay: i * 0.05 }}
               className="group p-10 rounded-3xl bg-white border border-border/50 hover:border-primary/20 transition-all hover:scale-[1.02] hover:shadow-xl relative overflow-hidden h-[320px] flex flex-col justify-start"
             >
-              <div className="relative z-10 transition-all duration-300 group-hover:-translate-y-2">
+              <div className="relative z-10 transition-all duration-500 md:group-hover:-translate-y-6">
                 <div className={`mb-8 p-4 rounded-2xl bg-secondary w-fit transition-all duration-300 md:group-hover:opacity-0 ${item.color}`}>
                   <item.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-black text-primary tracking-tighter mb-2 group-hover:text-primary transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest opacity-70 group-hover:opacity-0 transition-opacity duration-300">
+                <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest opacity-70 md:group-hover:opacity-0 transition-opacity duration-300">
                   {item.value}
                 </p>
               </div>
 
               {/* Hover Content */}
-              <div className="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+              <div className="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-primary/5 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-all duration-500 translate-y-4 md:group-hover:translate-y-0">
                 <p className="text-primary font-medium text-sm border-t border-primary/10 pt-4">
                   Пример текста. Подробное описание объекта инфраструктуры, его особенностей и преимуществ для резидентов.
                 </p>
-              </div>
-              
-              {/* Animated Accent */}
-              <div className="absolute top-4 right-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                <Plus className="w-6 h-6" />
               </div>
             </motion.div>
           ))}

@@ -17,12 +17,20 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      setMobileMenuOpen(false);
+      const scrolled = window.scrollY > 50;
+      if (isScrolled !== scrolled) {
+        setIsScrolled(scrolled);
+      }
+
+      // Only close if it's currently open to avoid unnecessary re-renders
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isScrolled, mobileMenuOpen]);
 
   return (
     <nav
@@ -94,7 +102,7 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div className={cn(
-        'fixed inset-0 z-[60] bg-background/98 backdrop-blur-xl transition-all duration-500 lg:hidden',
+        'fixed inset-0 z-[60] bg-zinc-900/98 backdrop-blur-xl transition-all duration-500 lg:hidden',
         mobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'
       )}>
         <div className="flex flex-col h-full p-8">
