@@ -18,6 +18,7 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      setMobileMenuOpen(false);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -60,14 +61,14 @@ export function Navbar() {
         {/* Actions */}
         <div className="flex items-center gap-4">
           <a
-            href="tel:+74951545054"
+            href="tel:+74212508028"
             className={cn(
               'hidden sm:flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-70',
               isScrolled ? 'text-primary' : 'text-white'
             )}
           >
             <Phone className="w-4 h-4" />
-            <span>+7 (495) 154-50-54</span>
+            <span>+7 (4212) 50-80-28</span>
           </a>
           
           <button
@@ -120,9 +121,9 @@ export function Navbar() {
           </div>
 
           <div className="mt-auto pt-8 border-t border-white/20">
-            <a href="tel:+74951545054" className="flex items-center gap-3 text-lg font-semibold text-white mb-6">
+            <a href="tel:+74212508028" className="flex items-center gap-3 text-lg font-semibold text-white mb-6">
               <Phone className="w-5 h-5" />
-              <span>+7 (495) 154-50-54</span>
+              <span>+7 (4212) 50-80-28</span>
             </a>
             <button className="w-full bg-white text-primary py-4 rounded-2xl font-bold text-lg">
               Получить консультацию

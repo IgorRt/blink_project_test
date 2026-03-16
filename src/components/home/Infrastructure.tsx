@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 import { GraduationCap, Landmark, Hotel, Activity, Building2, Anchor, Trees, Plus } from 'lucide-react';
 
 const infrastructureItems = [
-  { title: 'Смотровые площадки', value: '700тыс. м²', icon: Trees, color: 'text-emerald-500' },
-  { title: 'Деловой комплекс', value: '280тыс. м²', icon: Landmark, color: 'text-indigo-500' },
-  { title: 'Конгресс-центры', value: '10.2 га', icon: Building2, color: 'text-blue-500' },
-  { title: 'Гостиничный комплекс', value: '20тыс. м²', icon: Hotel, color: 'text-amber-500' },
-  { title: 'Парусная школа', value: 'Морское дело', icon: Anchor, color: 'text-cyan-500' },
-  { title: 'Спорт и рекреация', value: 'Центр видов спорта', icon: Activity, color: 'text-rose-500' },
-  { title: 'Образование', value: '2 школы и 5 садов', icon: GraduationCap, color: 'text-purple-500' },
-  { title: 'Жилой квартал', value: 'Бизнес-класс', icon: Building2, color: 'text-slate-500' },
+  { title: 'Смотровые площадки', value: '700тыс. м²', icon: Trees, color: 'text-primary' },
+  { title: 'Деловой комплекс', value: '280тыс. м²', icon: Landmark, color: 'text-primary' },
+  { title: 'Конгресс-центры', value: '10.2 га', icon: Building2, color: 'text-primary' },
+  { title: 'Гостиничный комплекс', value: '20тыс. м²', icon: Hotel, color: 'text-primary' },
+  { title: 'Парусная школа', value: 'Морское дело', icon: Anchor, color: 'text-primary' },
+  { title: 'Спорт и рекреация', value: 'Центр видов спорта', icon: Activity, color: 'text-primary' },
+  { title: 'Образование', value: '2 школы и 5 садов', icon: GraduationCap, color: 'text-primary' },
+  { title: 'Жилой квартал', value: 'Бизнес-класс', icon: Building2, color: 'text-primary' },
 ];
 
 export function Infrastructure() {
@@ -26,7 +26,7 @@ export function Infrastructure() {
             <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20">
               Инфраструктура
             </span>
-            <h2 className="text-4xl md:text-6xl font-black text-primary tracking-tighter uppercase mb-6 leading-tight">
+            <h2 className="text-[clamp(1.5rem,5vw,3.75rem)] font-black text-primary tracking-tighter uppercase mb-6 leading-tight">
               Масштабное многофункциональное <br />
               пространство
             </h2>
@@ -47,8 +47,8 @@ export function Infrastructure() {
               transition={{ delay: i * 0.05 }}
               className="group p-10 rounded-3xl bg-white border border-border/50 hover:border-primary/20 transition-all hover:scale-[1.02] hover:shadow-xl relative overflow-hidden h-[320px] flex flex-col justify-start"
             >
-              <div className="relative z-10">
-                <div className={`mb-8 p-4 rounded-2xl bg-secondary w-fit transition-transform group-hover:scale-110 ${item.color}`}>
+              <div className="relative z-10 transition-all duration-300 group-hover:-translate-y-2">
+                <div className={`mb-8 p-4 rounded-2xl bg-secondary w-fit transition-all duration-300 md:group-hover:opacity-0 ${item.color}`}>
                   <item.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-black text-primary tracking-tighter mb-2 group-hover:text-primary transition-colors">

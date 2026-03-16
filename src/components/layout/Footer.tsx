@@ -113,17 +113,17 @@ export function Footer() {
             <div className="text-lg font-bold uppercase tracking-widest text-white/50">Контакты</div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div className="flex flex-col gap-4">
-                <a href="tel:+74951545054" className="flex items-center gap-3 text-white hover:text-white/70 transition-colors group">
+                <a href="tel:+74212508028" className="flex items-center gap-3 text-white hover:text-white/70 transition-colors group">
                   <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:bg-white/10 transition-colors">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <span className="text-lg font-bold">+7 (495) 154-50-54</span>
+                  <span className="text-lg font-bold">+7 (4212) 50-80-28</span>
                 </a>
-                <a href="mailto:info@khv-city.ru" className="flex items-center gap-3 text-white hover:text-white/70 transition-colors group">
+                <a href="mailto:psi@khv.gov.ru" className="flex items-center gap-3 text-white hover:text-white/70 transition-colors group">
                   <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:bg-white/10 transition-colors">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <span className="text-lg font-bold">info@khv-city.ru</span>
+                  <span className="text-lg font-bold">psi@khv.gov.ru</span>
                 </a>
               </div>
               <div className="flex items-start gap-3 text-white group">
@@ -132,7 +132,7 @@ export function Footer() {
                 </div>
                 <div>
                   <div className="text-lg font-bold mb-1">г. Хабаровск</div>
-                  <div className="text-sm text-white/50">ул. Ленина, д. 1, БЦ "Парус"</div>
+                  <div className="text-sm text-white/50">Амурский б-р, 43</div>
                   <div className="text-sm text-white/50 mt-2 italic">Ежедневно с 9.00 до 19.00</div>
                 </div>
               </div>
@@ -144,7 +144,7 @@ export function Footer() {
           <div>© 2026 Хабаровск-Сити. Все права защищены.</div>
           <div className="flex items-center gap-8">
             <a href="#" className="hover:text-white/60 transition-colors">Политика конфиденциальности</a>
-            <a href="#" className="hover:text-white/60 transition-colors">Разработка: Blink</a>
+            <a href="#" className="hover:text-white/60 transition-colors">РАЗРАБОТКА: ПРОЕКТНО-СТРОИТЕЛЬНЫЙ ИНСТИТУТ</a>
           </div>
         </div>
       </div>
