@@ -5,6 +5,12 @@ import { Toaster } from 'react-hot-toast'
 import App from './App'
 import './index.css'
 
+if ('scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual'
+}
+
+window.scrollTo(0, 0)
+
 const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

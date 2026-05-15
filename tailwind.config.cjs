@@ -66,11 +66,17 @@ module.exports = {
   		},
   		fontFamily: {
   			sans: [
-  				'Open Sans',
+  				'Manrope',
+  				'-apple-system',
+  				'BlinkMacSystemFont',
+  				'Segoe UI',
+  				'system-ui',
   				'sans-serif'
   			],
   			serif: [
+  				'Cormorant',
   				'Playfair Display',
+  				'Georgia',
   				'serif'
   			],
   			mono: [
