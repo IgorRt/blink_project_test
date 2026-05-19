@@ -26,7 +26,7 @@ export function Hero() {
       ref={containerRef}
       className="relative h-[180svh] bg-background"
     >
-      <div className="sticky top-0 min-h-[100svh] flex items-center justify-center pt-24 sm:pt-28 overflow-hidden">
+      <div className="sticky top-0 min-h-[112svh] sm:min-h-[100svh] flex items-center justify-center pt-24 sm:pt-28 overflow-hidden">
         <div
           aria-hidden="true"
           style={{ backgroundImage: `url(${heroBg})` }}

@@ -8,6 +8,8 @@ import { Infrastructure } from './components/home/Infrastructure';
 import { Architecture } from './components/home/Architecture';
 import { Partners } from './components/home/Partners';
 import { Footer } from './components/layout/Footer';
+import { LeadFormProvider } from './components/common/LeadFormContext';
+import { LeadFormModal } from './components/common/LeadFormModal';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,22 +30,25 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-background">
-      {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+    <LeadFormProvider>
+      <div className="relative min-h-screen bg-background">
+        {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
 
-      <Navbar />
+        <Navbar />
 
-      <main>
-        <Hero />
-        <AboutStats />
-        <Location />
-        <Architecture />
-        <Infrastructure />
-        <Partners />
-      </main>
+        <main>
+          <Hero />
+          <AboutStats />
+          <Location />
+          <Architecture />
+          <Infrastructure />
+          <Partners />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+        <LeadFormModal />
+      </div>
+    </LeadFormProvider>
   );
 }
 

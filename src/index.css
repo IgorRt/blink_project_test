@@ -67,6 +67,8 @@
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: hsl(var(--charcoal));
+    overscroll-behavior-y: none;
   }
 
   html::-webkit-scrollbar,
@@ -77,11 +79,19 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply text-foreground font-sans antialiased;
 
+    min-height: 100%;
+    background-color: hsl(var(--charcoal));
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
+    overscroll-behavior-y: none;
     font-feature-settings: 'ss01', 'cv11';
+  }
+
+  #root {
+    min-height: 100%;
+    background-color: hsl(var(--background));
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -146,6 +156,23 @@
 
   .bg-charcoal { background-color: hsl(var(--charcoal)); }
   .text-charcoal { color: hsl(var(--charcoal)); }
+
+  .site-nav-safe-area {
+    padding-top: calc(1rem + env(safe-area-inset-top));
+    background:
+      linear-gradient(
+        to bottom,
+        hsl(var(--charcoal)) 0,
+        hsl(var(--charcoal)) env(safe-area-inset-top),
+        transparent env(safe-area-inset-top)
+      );
+  }
+}
+
+@media (min-width: 640px) {
+  .site-nav-safe-area {
+    padding-top: calc(1.25rem + env(safe-area-inset-top));
+  }
 }
 
 /* Preloader animations */

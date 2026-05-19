@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X, Phone } from 'lucide-react';
+import { CONSULTATION_MAILTO } from '../../lib/contacts';
 
 const navLinks = [
   { name: 'О проекте', href: '#about' },
@@ -62,7 +63,7 @@ export function Navbar() {
     <>
       <nav
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4 sm:py-5',
+          'site-nav-safe-area fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pb-4 sm:pb-5',
           // Glass: blur + saturate without own background so blend-mode can read through.
           'backdrop-blur-xl backdrop-saturate-150',
           'border-b border-white/[0.08]'
@@ -155,13 +156,13 @@ export function Navbar() {
               <Phone className="w-4 h-4 text-gold" fill="currentColor" strokeWidth={1.5} />
               <span>+7 (4212) 45-01-03</span>
             </a>
-            <button
-              type="button"
+            <a
+              href={CONSULTATION_MAILTO}
               onClick={() => setMobileMenuOpen(false)}
               className="w-full bg-white text-foreground py-4 rounded-full font-semibold text-sm uppercase tracking-[0.18em] active:scale-[0.98] transition-transform"
             >
               Получить консультацию
-            </button>
+            </a>
           </div>
         </div>
       </div>

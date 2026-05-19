@@ -5,6 +5,8 @@ const CENTER: [number, number] = [48.461016, 135.082217];
 const ZOOM = 14;
 const API_URL = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
 const SCRIPT_ID = 'yandex-maps-api';
+const GRAY_MAP_CLASS =
+  'w-full h-full [filter:grayscale(0.55)_saturate(0.750)_contrast(1.00)_brightness(1.0)]';
 
 type YMaps = {
   ready: (cb: () => void) => void;
@@ -78,7 +80,7 @@ export function YandexMap() {
             const placemark = new ymaps.Placemark(
               CENTER,
               { hintContent: 'Хабаровск-Сити', balloonContent: 'Хабаровск-Сити' },
-              { preset: 'islands#blueDotIcon' },
+              { preset: 'islands#grayDotIcon' },
             );
             // @ts-expect-error geoObjects.add accepts Placemark instance
             map.geoObjects.add(placemark);
@@ -107,11 +109,11 @@ export function YandexMap() {
         src={`https://yandex.ru/map-widget/v1/?ll=${CENTER[1]}%2C${CENTER[0]}&z=${ZOOM}&pt=${CENTER[1]},${CENTER[0]},pm2rdm`}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="w-full h-full"
+        className={GRAY_MAP_CLASS}
         style={{ border: 0 }}
       />
     );
   }
 
-  return <div ref={mapRef} className="w-full h-full" />;
+  return <div ref={mapRef} className={GRAY_MAP_CLASS} />;
 }

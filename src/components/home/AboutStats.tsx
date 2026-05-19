@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Building2, Construction, MapPin, Waves } from 'lucide-react';
 import { AnimatedValueText } from '../common/AnimatedNumber';
+import { CONSULTATION_MAILTO } from '../../lib/contacts';
+import presentationPdf from '../../assets/pdf/Хабаровск сити 28.03.2026.pdf';
 
 const stats = [
   { label: 'Общая площадь строительства', value: '1.6', unit: 'млн м²', icon: Construction },
@@ -41,18 +43,19 @@ export function AboutStats() {
             </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <button
-                type="button"
+              <a
+                href={CONSULTATION_MAILTO}
                 className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-full bg-foreground text-background font-semibold text-sm sm:text-base uppercase tracking-widest lg:hover:bg-charcoal active:scale-[0.98] transition-colors"
               >
                 Получить консультацию
-              </button>
-              <button
-                type="button"
+              </a>
+              <a
+                href={presentationPdf}
+                download="Хабаровск сити 28.03.2026.pdf"
                 className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-full border border-foreground/15 text-foreground font-semibold text-sm sm:text-base uppercase tracking-widest lg:hover:border-gold lg:hover:text-gold-deep transition-colors"
               >
                 Презентация
-              </button>
+              </a>
             </div>
           </div>
 
