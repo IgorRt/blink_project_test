@@ -1,75 +1,115 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Landmark, Hotel, Activity, Building2, Anchor, Trees, Plus } from 'lucide-react';
+import { GraduationCap, Landmark, Hotel, Activity, Building2, Anchor, Trees } from 'lucide-react';
+import { AnimatedValueText } from '../common/AnimatedNumber';
 
 const infrastructureItems = [
-  { title: 'Смотровые площадки', value: '700тыс. м²', icon: Trees, color: 'text-emerald-500' },
-  { title: 'Деловой комплекс', value: '280тыс. м²', icon: Landmark, color: 'text-indigo-500' },
-  { title: 'Конгресс-центры', value: '10.2 га', icon: Building2, color: 'text-blue-500' },
-  { title: 'Гостиничный комплекс', value: '20тыс. м²', icon: Hotel, color: 'text-amber-500' },
-  { title: 'Парусная школа', value: 'Морское дело', icon: Anchor, color: 'text-cyan-500' },
-  { title: 'Спорт и рекреация', value: 'Центр видов спорта', icon: Activity, color: 'text-rose-500' },
-  { title: 'Образование', value: '2 школы и 5 садов', icon: GraduationCap, color: 'text-purple-500' },
-  { title: 'Жилой квартал', value: 'Бизнес-класс', icon: Building2, color: 'text-slate-500' },
+  {
+    title: 'Смотровые площадки',
+    value: '700 тыс. м²',
+    icon: Trees,
+    description: 'Панорамные обзорные зоны на берегу Амура с видом на исторический центр.',
+  },
+  {
+    title: 'Деловой комплекс',
+    value: '280 тыс. м²',
+    icon: Landmark,
+    description: 'Современные офисы класса А, коворкинги и пространства для переговоров.',
+  },
+  {
+    title: 'Конгресс-центры',
+    value: '10.2 га',
+    icon: Building2,
+    description: 'Залы для международных форумов, конференций и выставок.',
+  },
+  {
+    title: 'Гостиничный комплекс',
+    value: '20 тыс. м²',
+    icon: Hotel,
+    description: 'Отели уровня 4★ и 5★ для деловых поездок и гостей города.',
+  },
+  {
+    title: 'Парусная школа',
+    value: 'Морское дело',
+    icon: Anchor,
+    description: 'Обучение парусному спорту и водным дисциплинам на акватории Амура.',
+  },
+  {
+    title: 'Спорт и рекреация',
+    value: 'Центр видов спорта',
+    icon: Activity,
+    description: 'Фитнес-центры, бассейны, корты и зоны для активного отдыха.',
+  },
+  {
+    title: 'Образование',
+    value: '2 школы и 5 садов',
+    icon: GraduationCap,
+    description: 'Современные учреждения для детей резидентов кластера.',
+  },
+  {
+    title: 'Жилой квартал',
+    value: 'Бизнес-класс',
+    icon: Building2,
+    description: 'Жильё с продуманной планировкой и панорамным остеклением.',
+  },
 ];
 
 export function Infrastructure() {
   return (
-    <section id="infrastructure" className="relative py-24 bg-secondary overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+    <section id="infrastructure" data-theme="light" className="relative py-16 md:py-28 bg-secondary overflow-hidden">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+        <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
           >
-            <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-4 border border-primary/20">
-              Инфраструктура
-            </span>
-            <h2 className="text-4xl md:text-6xl font-black text-primary tracking-tighter uppercase mb-6 leading-tight">
-              Масштабное многофункциональное <br />
-              пространство
+            <div className="inline-flex items-center gap-2.5 mb-5">
+              <span className="block w-8 h-px bg-gold" />
+              <span className="text-[10px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-gold-deep">
+                Инфраструктура
+              </span>
+              <span className="block w-8 h-px bg-gold" />
+            </div>
+            <h2 className="text-[clamp(1.625rem,5.5vw,3.5rem)] font-black text-foreground tracking-tight uppercase mb-5 md:mb-6 leading-[1.05] text-balance break-words hyphens-auto">
+              Многофункциональное пространство
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Комплексная инфраструктура "Хабаровск-Сити" создана для обеспечения максимального 
-              комфорта и эффективности. Все необходимое для бизнеса и жизни в шаговой доступности.
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              Комплексная инфраструктура «Хабаровск-Сити» создана для максимального комфорта
+              и эффективности. Всё необходимое для бизнеса и жизни в шаговой доступности.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {infrastructureItems.map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="group p-10 rounded-3xl bg-white border border-border/50 hover:border-primary/20 transition-all hover:scale-[1.02] hover:shadow-xl relative overflow-hidden h-[320px] flex flex-col justify-start"
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.4, ease: 'easeOut', delay: Math.min(i * 0.03, 0.18) }}
+              className="group relative p-6 md:p-7 rounded-2xl bg-background border border-border lg:hover:border-gold/40 transition-[border-color] overflow-hidden"
             >
-              <div className="relative z-10">
-                <div className={`mb-8 p-4 rounded-2xl bg-secondary w-fit transition-transform group-hover:scale-110 ${item.color}`}>
-                  <item.icon className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-black text-primary tracking-tighter mb-2 group-hover:text-primary transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest opacity-70 group-hover:opacity-0 transition-opacity duration-300">
-                  {item.value}
-                </p>
+              {/* corner accent */}
+              <div className="absolute top-0 right-0 w-10 h-10 pointer-events-none opacity-60 lg:group-hover:opacity-100 transition-opacity">
+                <div className="absolute top-0 right-0 w-full h-px bg-gold/50" />
+                <div className="absolute top-0 right-0 h-full w-px bg-gold/50" />
               </div>
 
-              {/* Hover Content */}
-              <div className="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                <p className="text-primary font-medium text-sm border-t border-primary/10 pt-4">
-                  Пример текста. Подробное описание объекта инфраструктуры, его особенностей и преимуществ для резидентов.
-                </p>
+              <div className="mb-5 text-gold">
+                <item.icon className="w-7 h-7" strokeWidth={1.25} />
               </div>
-              
-              {/* Animated Accent */}
-              <div className="absolute top-4 right-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                <Plus className="w-6 h-6" />
-              </div>
+              <h3 className="text-lg md:text-xl font-black text-foreground tracking-tighter mb-1.5 leading-tight break-words">
+                {item.title}
+              </h3>
+              <p className="text-[10px] md:text-xs font-semibold text-gold-deep uppercase tracking-[0.2em] mb-3">
+                <AnimatedValueText value={item.value} />
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {item.description}
+              </p>
             </motion.div>
           ))}
         </div>
